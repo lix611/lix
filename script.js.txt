@@ -1,0 +1,15 @@
+const familyMembers = [
+    { name: "Аав", age: 45, role: "Айлын тэргүүн" },
+    { name: "Ээж", age: 42, role: "Гэрийн эзэгтэй" },
+    { name: "Би", age: 20, role: "Оюутан" },
+    { name: "Дүү", age: 15, role: "Сурагч" }
+];
+
+const container = document.getElementById("family-container");
+
+familyMembers.forEach(member => {
+    const div = document.createElement("div");
+    div.className = "family-member";
+    div.innerHTML = `<h3>${member.name}</h3><p>Нас: ${member.age}</p><p>Үүрэг: ${member.role}</p>`;
+    container.appendChild(div);
+});
